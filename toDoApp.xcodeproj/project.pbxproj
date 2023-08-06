@@ -16,6 +16,7 @@
 		21B647D32A7984DA0027F9A9 /* KayitSayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B647D22A7984DA0027F9A9 /* KayitSayfa.swift */; };
 		21B647D52A7984EE0027F9A9 /* DetaySayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B647D42A7984EE0027F9A9 /* DetaySayfa.swift */; };
 		21B647D72A7997450027F9A9 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B647D62A7997450027F9A9 /* Tasks.swift */; };
+		21B895622A7F71E300C6A342 /* TasksHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B895612A7F71E300C6A342 /* TasksHucre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		21B647D22A7984DA0027F9A9 /* KayitSayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KayitSayfa.swift; sourceTree = "<group>"; };
 		21B647D42A7984EE0027F9A9 /* DetaySayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaySayfa.swift; sourceTree = "<group>"; };
 		21B647D62A7997450027F9A9 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		21B895612A7F71E300C6A342 /* TasksHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksHucre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		21B647CE2A79844F0027F9A9 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				21B895602A7F71B800C6A342 /* tableview */,
 				21B647D12A79846E0027F9A9 /* views */,
 			);
 			path = ui;
@@ -106,6 +109,14 @@
 				21B647D42A7984EE0027F9A9 /* DetaySayfa.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		21B895602A7F71B800C6A342 /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				21B895612A7F71E300C6A342 /* TasksHucre.swift */,
+			);
+			path = tableview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 				21B647D52A7984EE0027F9A9 /* DetaySayfa.swift in Sources */,
 				21B647D72A7997450027F9A9 /* Tasks.swift in Sources */,
 				21B647BD2A7984320027F9A9 /* SceneDelegate.swift in Sources */,
+				21B895622A7F71E300C6A342 /* TasksHucre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

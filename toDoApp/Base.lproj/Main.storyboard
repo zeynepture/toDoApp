@@ -16,20 +16,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsn-ix-Uwt">
-                                <rect key="frame" x="169" y="430.5" width="76" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="DETAY"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="4tx-kL-Kxl">
+                                <rect key="frame" x="0.0" y="153" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="btnDetay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VdE-R1-zku"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iQf-kU-Z9G"/>
                                 </connections>
-                            </button>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HYw-RI-bjb">
+                                <rect key="frame" x="0.0" y="208.5" width="414" height="653.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tasksHucre" id="mHy-4w-cHu" customClass="TasksHucre" customModule="toDoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mHy-4w-cHu" id="Bkm-BN-rXq">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O9X-uw-zL1">
+                                                    <rect key="frame" x="35" y="35" width="59" height="30"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhL-Oc-Qhr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="O9X-uw-zL1" firstAttribute="centerY" secondItem="Bkm-BN-rXq" secondAttribute="centerY" id="Nfn-xM-Xh6"/>
+                                                <constraint firstItem="O9X-uw-zL1" firstAttribute="leading" secondItem="Bkm-BN-rXq" secondAttribute="leadingMargin" constant="15" id="zz6-gV-OGg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelTaskName" destination="BhL-Oc-Qhr" id="XAY-xU-qzk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Rsn-ix-Uwt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="06P-Ra-M5Y"/>
-                            <constraint firstItem="Rsn-ix-Uwt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bvA-h1-bpK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HYw-RI-bjb" secondAttribute="bottom" id="1vR-rd-Lvh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HYw-RI-bjb" secondAttribute="trailing" id="3Ch-RD-x0R"/>
+                            <constraint firstItem="HYw-RI-bjb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Etv-GL-3aD"/>
+                            <constraint firstItem="4tx-kL-Kxl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GuA-rp-CZw"/>
+                            <constraint firstItem="4tx-kL-Kxl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Us9-LU-D3c"/>
+                            <constraint firstItem="HYw-RI-bjb" firstAttribute="top" secondItem="4tx-kL-Kxl" secondAttribute="bottom" id="WVd-w5-Epp"/>
+                            <constraint firstItem="4tx-kL-Kxl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X0c-YU-Y9T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="To Do List" id="QzZ-XY-wTi">
@@ -40,6 +78,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="4tx-kL-Kxl" id="sny-Ev-4MI"/>
+                        <outlet property="tasksTableView" destination="HYw-RI-bjb" id="Yn4-c0-eRf"/>
                         <segue destination="vz6-c0-0Gm" kind="show" identifier="toDetay" id="ATV-cf-n2v"/>
                     </connections>
                 </viewController>
@@ -104,7 +144,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiZ-Rf-qyo">
-                                <rect key="frame" x="136" y="432.5" width="142" height="49"/>
+                                <rect key="frame" x="136" y="424" width="142" height="49"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="KAYDET"/>
                                 <buttonConfiguration key="configuration" style="plain" title="KAYDET">
@@ -115,7 +155,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="İçerik" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eEO-Pn-ofS">
-                                <rect key="frame" x="50" y="202.5" width="314" height="150"/>
+                                <rect key="frame" x="50" y="194" width="314" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="mO0-Ck-FYk"/>
                                 </constraints>
@@ -148,7 +188,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fFZ-OC-BQb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="qbI-dQ-nT7">
-                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="16"/>
