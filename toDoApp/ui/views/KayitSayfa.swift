@@ -10,7 +10,7 @@ import UIKit
 class KayitSayfa: UIViewController {
 
     @IBOutlet weak var taskName: UITextField!
-    
+    var viewModel = KayitSayfaViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,13 +18,10 @@ class KayitSayfa: UIViewController {
     
     @IBAction func buttonKaydet(_ sender: Any) {
         if let tic = taskName.text {
-            kaydet(task_name: tic)
+            viewModel.kaydet(task_name: tic)
         }
     }
     
-    func kaydet(task_name: String)
-    {
-        print("Task olusturuluyor... Task İçeriği: \(task_name)")
-    }
+   
     
 }

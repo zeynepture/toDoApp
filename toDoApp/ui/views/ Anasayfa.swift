@@ -13,33 +13,33 @@ class Anasayfa: UIViewController {
     @IBOutlet weak var tasksTableView: UITableView!
     
     var tasksListesi = [Tasks]()
+    var viewModel = AnasayfaViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         tasksTableView.delegate = self
         tasksTableView.dataSource = self
-        
-        let t1 = Tasks(task_id: 1, task_name: "Odev zamaninda teslim edilecek.")
-        let t2 = Tasks(task_id: 2, task_name: "Eksik kalan videolar tamamlanacak.")
-        
-        tasksListesi.append(t1)
-        tasksListesi.append(t2)
+        _ = viewModel.taskListesi.subscribe(onNext: {liste in
+            self.tasksListesi = liste
+            self.tasksTableView.reloadData()
+        })
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.taskYukle()
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetay" {
             if let task = sender as? Tasks {
                 let gidilecekVC = segue.destination as! DetaySayfa
                 gidilecekVC.task = task
             }
-            
         }
     }
 }
-
 extension Anasayfa : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Task ara: \(searchText)")
+        self.viewModel.arama(arananKelime: searchText)
     }
 }
 
@@ -68,7 +68,7 @@ extension Anasayfa: UITableViewDelegate, UITableViewDataSource {
             let iptalAction = UIAlertAction(title: "İptal", style: .cancel)
             alert.addAction(iptalAction)
             let evetAction = UIAlertAction(title: "Evet", style: .destructive) { action in
-                print("Task sil: \(task.task_name!)")
+                self.viewModel.sil(task_id: task.task_id!)
             }
             alert.addAction(evetAction)
             self.present(alert, animated: true)
