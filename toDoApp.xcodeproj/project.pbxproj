@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212024882A8C0556002D4F29 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2120247D2A8C0556002D4F29 /* FMDatabasePool.m */; };
+		212024892A8C0556002D4F29 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2120247E2A8C0556002D4F29 /* FMDatabaseQueue.m */; };
+		2120248A2A8C0556002D4F29 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2120247F2A8C0556002D4F29 /* FMResultSet.m */; };
+		2120248B2A8C0556002D4F29 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 212024832A8C0556002D4F29 /* FMDatabaseAdditions.m */; };
+		2120248C2A8C0556002D4F29 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 212024852A8C0556002D4F29 /* FMDatabase.m */; };
+		2120248E2A8C0565002D4F29 /* todo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2120248D2A8C0565002D4F29 /* todo.sqlite */; };
 		21B647BB2A7984320027F9A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B647BA2A7984320027F9A9 /* AppDelegate.swift */; };
 		21B647BD2A7984320027F9A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B647BC2A7984320027F9A9 /* SceneDelegate.swift */; };
 		21B647BF2A7984320027F9A9 /*  Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B647BE2A7984320027F9A9 /*  Anasayfa.swift */; };
@@ -25,6 +31,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2120247C2A8C0555002D4F29 /* toDoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "toDoApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		2120247D2A8C0556002D4F29 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		2120247E2A8C0556002D4F29 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		2120247F2A8C0556002D4F29 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		212024802A8C0556002D4F29 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		212024812A8C0556002D4F29 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		212024822A8C0556002D4F29 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		212024832A8C0556002D4F29 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		212024842A8C0556002D4F29 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		212024852A8C0556002D4F29 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		212024862A8C0556002D4F29 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		212024872A8C0556002D4F29 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		2120248D2A8C0565002D4F29 /* todo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = todo.sqlite; sourceTree = "<group>"; };
+		212024902A8C0A5E002D4F29 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		21B647B72A7984320027F9A9 /* toDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21B647BA2A7984320027F9A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21B647BC2A7984320027F9A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,11 +75,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2120248F2A8C0A5E002D4F29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				212024902A8C0A5E002D4F29 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		21B647AE2A7984320027F9A9 = {
 			isa = PBXGroup;
 			children = (
 				21B647B92A7984320027F9A9 /* toDoApp */,
 				21B647B82A7984320027F9A9 /* Products */,
+				2120248F2A8C0A5E002D4F29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +111,19 @@
 				21B647C32A7984320027F9A9 /* Assets.xcassets */,
 				21B647C52A7984320027F9A9 /* LaunchScreen.storyboard */,
 				21B647C82A7984320027F9A9 /* Info.plist */,
+				212024842A8C0556002D4F29 /* FMDatabase.h */,
+				212024852A8C0556002D4F29 /* FMDatabase.m */,
+				212024822A8C0556002D4F29 /* FMDatabaseAdditions.h */,
+				212024832A8C0556002D4F29 /* FMDatabaseAdditions.m */,
+				212024802A8C0556002D4F29 /* FMDatabasePool.h */,
+				2120247D2A8C0556002D4F29 /* FMDatabasePool.m */,
+				212024812A8C0556002D4F29 /* FMDatabaseQueue.h */,
+				2120247E2A8C0556002D4F29 /* FMDatabaseQueue.m */,
+				212024862A8C0556002D4F29 /* FMDB.h */,
+				212024872A8C0556002D4F29 /* FMResultSet.h */,
+				2120247F2A8C0556002D4F29 /* FMResultSet.m */,
+				2120247C2A8C0555002D4F29 /* toDoApp-Bridging-Header.h */,
+				2120248D2A8C0565002D4F29 /* todo.sqlite */,
 			);
 			path = toDoApp;
 			sourceTree = "<group>";
@@ -184,6 +226,7 @@
 				TargetAttributes = {
 					21B647B62A7984320027F9A9 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -214,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21B647C72A7984320027F9A9 /* LaunchScreen.storyboard in Resources */,
+				2120248E2A8C0565002D4F29 /* todo.sqlite in Resources */,
 				21B647C42A7984320027F9A9 /* Assets.xcassets in Resources */,
 				21B647C22A7984320027F9A9 /* Main.storyboard in Resources */,
 			);
@@ -227,8 +271,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				21B647BF2A7984320027F9A9 /*  Anasayfa.swift in Sources */,
+				212024882A8C0556002D4F29 /* FMDatabasePool.m in Sources */,
+				2120248A2A8C0556002D4F29 /* FMResultSet.m in Sources */,
 				21B647D32A7984DA0027F9A9 /* KayitSayfa.swift in Sources */,
 				21B647BB2A7984320027F9A9 /* AppDelegate.swift in Sources */,
+				212024892A8C0556002D4F29 /* FMDatabaseQueue.m in Sources */,
 				21B647D52A7984EE0027F9A9 /* DetaySayfa.swift in Sources */,
 				21BF740C2A86B155006D9447 /* KayitSayfaViewModel.swift in Sources */,
 				21B647D72A7997450027F9A9 /* Tasks.swift in Sources */,
@@ -237,6 +284,8 @@
 				21B647BD2A7984320027F9A9 /* SceneDelegate.swift in Sources */,
 				21B895622A7F71E300C6A342 /* TasksHucre.swift in Sources */,
 				21BF740E2A86B163006D9447 /* DetaySayfaViewModel.swift in Sources */,
+				2120248B2A8C0556002D4F29 /* FMDatabaseAdditions.m in Sources */,
+				2120248C2A8C0556002D4F29 /* FMDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -398,6 +448,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.info.toDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "toDoApp/toDoApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -408,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -425,6 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.info.toDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "toDoApp/toDoApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
